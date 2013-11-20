@@ -18,9 +18,11 @@ DIFF_EXCLUDES="debug-*.conf org.*.service dbus-daemon.1 dbus-arch-deps.h"
 
 CYGCONF_ARGS="
 	--libexecdir=${CROSS_BINDIR}
+	--disable-abstract-sockets
 	--disable-doxygen-docs
 	--disable-xml-docs
 	--with-xml=expat
+	--with-dbus-session-bus-default-address=autolaunch:
 	--with-dbus-user=SYSTEM
 	--with-init-scripts=none
 	--without-x
